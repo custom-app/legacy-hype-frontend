@@ -1,0 +1,23 @@
+@mixin generator($prop, $propTitle, $value, $breakpoint: null, $BPTitle: null) {
+  @if($breakpoint) {
+    @media ('min-width': #{$breakpoint}px) {
+      body .#{$propTitle}-#{$BPTitle}-#{$value} {
+        #{$prop}: $value;
+      }
+    }
+  } @else {
+    body .#{$propTitle}-#{$value} {
+      #{$prop}: $value;
+    }
+  }
+}
+
+@each $class in $global-classes {
+  @include generator(nth($class, 1), nth($class, 2), nth($class, 3));
+}
+
+@each $class in $global-classes {
+  @each $breakpoint in $breakpoints {
+    @include generator(nth($class, 1), nth($class, 2), nth($class, 3), nth($breakpoint, 1), nth($breakpoint, 2));
+  }
+}

@@ -1,0 +1,58 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceRoot": "./",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2017",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "crypto": ["./node_modules/crypto-browserify"],
+      "stream": ["./node_modules/stream-browserify"],
+      "assert": ["./node_modules/assert"],
+      "http": ["./node_modules/stream-http"],
+      "https": ["./node_modules/https-browserify"],
+      "os": ["./node_modules/os-browserify"],
+      "@app/*": ["src/app/*"],
+      "@misc/*": ["src/app/misc/*"],
+      "@env/*": ["src/environments/*"],
+      "@shared/*": ["src/app/common/shared/*"],
+      "@layouts/*": ["src/app/common/modules/layouts/*"],
+      "@forms/*": ["src/app/common/modules/forms/*"],
+      "@modals/*": ["src/app/common/modules/modals/*"],
+      "@pipes/*": ["src/app/pipes/*"],
+      "@models/*": ["src/app/models/*"],
+      "@directives/*": ["src/app/directives/*"],
+      "@interceptors/*": ["src/app/interceptors/*"],
+      "@services/*": ["src/app/services/*"],
+      "@resolvers/*": ["src/app/resolvers/*"],
+      "@guards/*": ["src/app/guards/*"],
+      "@matchers/*": ["src/app/matchers/*"],
+      "@modules/*": ["src/app/modules/*"],
+      "@animation/*": ["src/app/animation/*"]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

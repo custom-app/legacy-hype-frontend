@@ -1,0 +1,29 @@
+<div class="container-md white--text pa-5">
+  <div class="d-md-flex mb-100">
+    <div class="col-md-7 text-align-center text-align-md-start">
+      <div class="size30-weight400 mb-13">Create contracts with payment by your hype.</div>
+      <div class="size18-weight400 mb-11">Specify the number of unique clicks on the link and the cost that you are willing to pay for this task. You can negotiate additional terms of contact in any messenger or social network. The user who took the contract will be rewarded only after the terms of the contract are fulfilled.</div>
+      <app-button [text]="'Create contract'" [color]="'primary'"></app-button>
+    </div>
+    <div class="col-md-5 text-align-center text-align-md-end">
+      <div class="size48-weight400 ducks-font mb-5 red--text mt-7">3789</div>
+      <div class="size30-weight400 mb-12">total HYPE avaible</div>
+      <div class="size18-weight400 mb-10">Not enought HYPE? Buy more!</div>
+      <app-button [text]="'buy hype'" [color]="'primary'"></app-button>
+    </div>
+  </div>
+
+  <ng-container *ngTemplateOutlet="data.length > 0 ? withTable : withoutTable"></ng-container>
+</div>
+
+
+
+<ng-template #withTable>
+  <div class="mb-100">
+    <app-table [data]="data" [columns]="columns"></app-table>
+  </div>
+</ng-template>
+
+<ng-template #withoutTable>
+  <div class="text-align-center size22-weight400 ducks-font mb-100">There is no hype contracts. time to create some!</div>
+</ng-template>

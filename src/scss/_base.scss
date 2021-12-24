@@ -1,0 +1,203 @@
+@import "~@angular/material/theming";
+@import "variables";
+@import "mixins";
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  overflow-y: auto;
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--ff-main-font);
+  color: $color-black;
+  font-size: 1.4rem;
+  min-width: 320px;
+  min-height: 100vh;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+i {
+  font-style: italic;
+}
+img {
+  max-width: 100%;
+}
+
+.primary-text-color {
+  color: $color-black;
+}
+
+.display_block {
+  display: block;
+}
+
+.justify-flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.justify-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.align-items-center {
+  display: flex;
+  align-items: center;
+}
+
+.align-items-flex-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+.flex-item {
+  width: 50%;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+}
+.link {
+  color: $color-blue;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.m {
+  @include createMargins($marginType: "margin");
+}
+
+.p {
+  @include createMargins($marginType: "padding");
+}
+
+.text_color-blue {
+  color: $color-blue;
+}
+.text_color-red {
+  color: $color-red;
+}
+.text_color-dark-gray {
+  color: $color-dark-grey;
+}
+.font-weight {
+  font-weight: 500;
+}
+
+.spinner-wheel {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.content__container {
+  max-width: calc(1200px + (#{$default-gap} * 2));
+  padding: 0 2rem;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-s) {
+    padding: 6rem 2rem 0;
+  }
+  @media (max-width: $tablet-l) {
+    form {
+      width: 100%;
+    }
+  }
+}
+.content {
+  padding-top: 6rem;
+  position: relative;
+  &__title {
+    color: $color-red;
+    font-size: 4.8rem;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 7rem;
+    display: block;
+    text-transform: uppercase;
+    font-family: Ducks;
+  }
+  &__subtitle {
+    color: $color-white;
+    line-height: 1.4;
+    font-size: 3rem;
+    margin-bottom: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  &__text {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    color: $color-white;
+  }
+  &__form {
+    margin: 0 auto;
+  }
+  &__input {
+    height: 46px;
+    border: 2px solid #A8A8A8;
+    box-shadow: none;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    padding: 0 1.5rem;
+    color: $color-white;
+    transition: all 0.2s ease;
+    font-size: 2rem;
+    &_number {
+      line-height: 4 !important;
+      padding-top: 1rem;
+      &::placeholder {
+        line-height: 4;
+      }
+      @media (max-width: 575px) {
+        line-height: 2 !important;
+      }
+    }
+    &:focus {
+      border-color: $color-white;
+    }
+    &__icon {
+      position: absolute;
+      right: 1.5rem;
+      top: 1.2rem;
+      font-size: 22px;
+    }
+  }
+  &__button {
+    width: 100%;
+  }
+}

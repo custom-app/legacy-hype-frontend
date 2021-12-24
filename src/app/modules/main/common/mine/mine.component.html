@@ -1,0 +1,24 @@
+<div class="content">
+    <div class="content__container">
+        <div class="mb-100 justify-space-between flex-wrap">
+            <div class="flex-item">
+                <div class="content__subtitle mb-40">There are two ways to mine HYPE</div>
+                <div class="list">
+                    <div class="list__item">
+                        <div class="content__text mb-4"><span class="ducks-font red--text mr-2">1.</span>Distribute your promo code. Anyone who uses your promo code will
+                            get 10% more tokens when they purchase. You will get 10% of the amount of his refills in HYPE tokens</div>
+                        <div class="content__text"><span class="ducks-font red--text mr-2">2.</span>Perform community tasks from the list below</div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-item align-items-flex-end flex-column">
+                <div class="content__text mb-40">You have no personal HYPE promo code</div>
+                <app-button [text]="'Register promocode'" [color]="'primary'" (btnClick)="click()"></app-button>
+                <app-button [text]="'Download promo kit'" [color]="'accent'"></app-button>
+            </div>
+        </div>
+        <div class="table">
+            <app-table [data]="data" [columns]="columns"></app-table>
+        </div>
+    </div>
+</div>

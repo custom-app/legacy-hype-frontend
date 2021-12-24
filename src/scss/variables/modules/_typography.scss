@@ -1,0 +1,11 @@
+@import "variables";
+
+:root {
+  // FONT-FAMILY
+
+  --ff-main-font: #{$main-font};
+}
+
+.semi-bold {
+  font-weight: 600;
+}

@@ -1,0 +1,184 @@
+
+# HYPE v.0.0.1
+------------------
+
+HYPE is CPA & Influence OTC desk. buyHYPE.io// mineHYPE.io// spendHYPE.io websites are developed to maintain tokens. Dedicated tokens can be bought, mined and spent within the ecosystem. The platform provides OTC (over-the-counter) desk functionality executed with the help of the smart-contracts and operates as a reliable validator to prove the agreement between both parties was confirmed. 
+
+# Contracts list 
+----------------
+
+```
+	contracts/HYPE//token.sol
+	Address: https://bscscan.com/address/0x46fa62533b07b2c3a4b37007f1fc457d42f1f88f
+	contracts/HYPE/BUSD.sol
+	Address: https://bscscan.com/address/0xe9e7cea3dedca5984780bafc599bd69add087d56
+	contracts/HYPE/BUY.sol
+	Address: https://bscscan.com/address/0xccfae3a931827fcf358f194061e202d04397b90e
+	contracts/HYPE/Mine.sol
+	Address: TBD
+
+```
+
+
+# Business process
+------------------
+
+The platform operates UID links to mark the users’ requests and maintains those links to prove the job (request) execution (fulfilment) by matching the links with the operations. After the job (request) is approved user who fulfilled the execution is able to claim the dedicated amount of tokens. Smart contracts are responsible both for validation and permits granting and transaction execution. 
+
+## List of Roles: 
+
+	- Buyer (B) — user who buys HYPE 
+	- Miner (M) — user who earns HYPE by fulfilling job requests 
+	- Agent (A) // extended Miner with additional HYPE bonuses available to claim based on activity
+	- Spender (S) —user who creates job offer and fulfils the payment in HYPE
+	- Platform (P) — smart contracts business logic
+
+## Buy flow
+
+Available operations for B: 
+	1. UID usage to buy (swap) HYPE/BUSD. 
+	2. Receive Pancake token directly to the wallet connected (Metamask, WalletConnect, etc.).
+	3. Receive calculated bonuses to the platform account registered. 
+	4. Claim tokens as a bonus directly to the wallet connected (Metamask, WalletConnect, etc.).
+
+Available operations for P: 
+	1. Track the UID input and validate UID. 
+	2. Transfer tokens from contract to the account. 
+	3. Grant permissions to claim tokens based ob UID validation. 
+
+## Mine flow
+
+!! proof-of-hype !!
+
+Available operations for M: 
+	1. Generate UID for the interaction that can include but are not limited to purchase types. 
+	2. Claim reward for the transactions that contain generated UID. 
+
+Available operations for P: 
+	1. Issue UID within Mine smart-contract 
+	2. Track the transactions with the dedicated UID indication. 
+	3. Transfer commission from the Mine contract in favour of the UID’s issuer (M). 
+
+## Spend flow
+
+!! proof-of-view !!
+
+Available operations for S: 
+	1. Create job request with: HYPE price, terms and/or details, due date.
+	2. Review applications. 
+	3. Approve (M) to fulfil the request. 
+	4. Approve HYPE balance lock. 
+	5. Approve payment to (M) upon matching job requirements fulfilment criteria.
+	6. Decline payment to (M) upon not matching job requirements fulfilment criteria. 
+	7. Claim declined payment amount in HYPE directly to the linked wallet. 
+
+Available operations for M: 
+	1. Browse job requirements available.
+	2. Submit application(s) to fulfil for requirement(s).
+	3. Get notified when the dedicated application was approved by (S). 
+	4. Get UID link for further usage in media campaign. 
+	5. Claim HYPE payment upon matching the requirements fulfilment criteria.
+
+Available operations for P: 
+	1. Register job offer requirement. 
+	2. Issue UID link for the dedicated job requirement and track timestamps, price and/or any other criteria added by (S).
+	3. Receive and lock HYPE tokens until the (S) approves or declines transaction. 
+	4. Validate and automate transactions based on matching job requirements fulfilment criteria.
+
+## HYPE Agents 
+
+Period: every 7 days 
+Action: the most active UID is selected. Agent role is granted to the UID’s owner (wallet hash). 
+Reward mechanism: with 100 weeks passed (100 reporting periods of 7 days) the Agent tokens are transferred to the Agents roles within the platform accounts and become available to claim directly to the wallet connected (Metamask, WalletConnect, etc.) based on wallets hashes. 
+ 
+**Business-process! - the amount reported is the top active 7 days of the agent’s UID (7 top profit days were tracked in 100 weeks of the calculated period). Agents’ tokens are distributed equally to the number of buyers UID’s owner managed to engage (within the reported period). 
+
+# Tokenomics 
+------------
+
+	Total supply: 7 000 000 000 
+	Mining: 70%
+	HYPE creators: 5%
+	HYPE developers: 5%
+	HYPE Agents: 5%
+	Liquidity Pool Pancake: 5%
+	Pre-sale: 10%
+	
+## Pre-sale
+
+	Pre-sale allocation: 700 000 000 HYPE tokes
+	Pre-sale price: $0.003 
+
+## Use of funds 
+
+	Liquidity: 50%
+	Marketing: 50% 
+
+## Pancake
+
+	Pancake allocation: 350 000 000 HYPE on liquidity pair
+	Pancake price: $0.003
+
+## Revenue 
+
+In order to grant team’s interests to hold HYPE tokens additional commissions can be applied to the HYPE transactions on Pancake. 
+
+	Commission: 1-5% per each transaction tracked
+	Commission currency: BUSD
+
+# HYPE Token info 
+-----------------
+
+	Token name: HYPE
+	Total supply: 7 000 000 000
+	Token type: BEP20
+	Decimals: 18 
+	Block explorer: BSC Scan 
+
+# Platform Automation 
+---------------------
+
+The platform is fully automated and operates on web3 and smart contracts with off-chain workers used to reduce the main chain load. 
+
+##Tech stack: 
+
+### Frontend:
+
+	- Angular
+	- web3.js lib
+
+### Smart contracts:
+
+	- Solidity
+	- hardhat
+	- NodeJs
+	- chai\mocha
+	- OpenZeppelin
+
+### Off-chain 
+	
+	- Go
+
+# Materials
+-----------
+
+## Website
+
+	https://buyHYPE.io
+
+## Telegram: 
+
+	Main: https://t.me/buyHYPE 
+	Channel: https://t.me/mineHYPE
+	Group: https://t.me/spendHYPE 
+
+## Twitter: 
+
+	https://twitter.com/minehype_io 
+
+## Medium: 
+
+	https://medium.com/@mineHYPE
+	
+-------------------
+v.0.0.1 // 12/12/21

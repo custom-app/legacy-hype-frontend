@@ -1,0 +1,11 @@
+.dialog-close-btn {
+  position: absolute;
+  right: -4px;
+  top: -4px;
+  width: 50px;
+  height: 50px;
+  background: url("/assets/img/button_X.svg") bottom no-repeat;
+  border: 0;
+  cursor: pointer;
+  z-index: 5;
+}

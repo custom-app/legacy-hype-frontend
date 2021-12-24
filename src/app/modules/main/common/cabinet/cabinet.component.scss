@@ -1,0 +1,32 @@
+@media (max-width: 1024px) {
+  .d-flex {
+    flex-wrap: wrap;
+    div {
+      width: 100%;
+    }
+  }
+}
+
+.cabinet-block {
+  position: relative;
+  @media (min-width: 992px) {
+    &:nth-child(1):after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 170px;
+      background: #ff4016;
+      width: 4px;
+    }
+    &:nth-child(2):after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 170px;
+      background: #ff4016;
+      width: 4px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "variables";
+
+.custom-dialog .mat-dialog-container{
+  border: 4px solid $color-red;
+  border-radius: 0;
+  background: black;
+  position: relative;
+  overflow: hidden;
+  padding-top: 77px;
+  margin: 0 2rem;
+
+  @media (max-width: $tablet-s) {
+    padding-top: 3rem;
+    div {
+      font-size: 1.8rem;
+      margin-bottom: 0 !important;
+    }
+  }
+}

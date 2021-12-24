@@ -1,0 +1,53 @@
+<header>
+    <div class="d-md-none">
+        <ng-template *ngTemplateOutlet="mobile"></ng-template>
+    </div>
+    <div class="d-none d-md-block">
+        <ng-template *ngTemplateOutlet="desktop"></ng-template>
+    </div>
+
+    <mat-drawer-container class="example-container" [hasBackdrop]="true" autosize>
+        <mat-drawer  [mode]="'over'" #drawer class="example-sidenav" mode="side">
+            <ng-template *ngTemplateOutlet="desktop"></ng-template>
+        </mat-drawer>
+    </mat-drawer-container>
+</header>
+
+<ng-template #desktop>
+    <div class="header header-mobile">
+        <div class="header__row">
+            <div (click)="drawer.close()" routerLink="/" class="header__logo">
+                <img src="assets/img/logo.svg" alt="DAO logo"/>
+            </div>
+        </div>
+        <div class="header-buttons">
+            <div (click)="drawer.close()" class="menu">
+                <div routerLink="/hype-agent">Hype agents</div>
+                <div routerLink="/buy-hype">Buy hype</div>
+                <div routerLink="/mine-hype">Mine hype</div>
+                <div routerLink="/spend-hype">Spend hype</div>
+                <div *ngIf="account.address" routerLink="/cabinet">Cabinet</div>
+                <div><a href="assets/pdf/hype.pdf" target="_blank">Pitch deck</a></div>
+                <div><a href="assets/pdf/hype.txt" target="_blank">README</a></div>
+            </div>
+            <!--    <a target="_blank" >-->
+            <!--      -->
+            <!--    </a>-->
+            <div (click)="drawer.toggle()" *ngIf="!account.address">
+                <button (click)="initialize()" mat-button class="button ducks-font">Connect wallet</button>
+            </div>
+            <div *ngIf="account.address">
+                <button mat-button class="button ducks-font background_white">{{'...' + account?.address.substring(0, 15)}}</button>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #mobile>
+    <div class="header">
+        <div routerLink="/" class="header__logo">
+            <img src="assets/img/logo.svg" alt="HYPE logo"/>
+        </div>
+        <mat-icon  (click)="open(drawer)" class="burger__icon" svgIcon="burgerIcon"></mat-icon>
+    </div>
+</ng-template>

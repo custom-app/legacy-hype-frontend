@@ -1,0 +1,25 @@
+@mixin snackbarColorScheme($current-color) {
+  background-color: rgba($current-color, 0.15);
+  color: $current-color;
+  border: 1px solid $current-color;
+}
+
+$initialSize: 0.4;
+$totalClasses: 20;
+
+@mixin createMargins($marginType) {
+  @for $i from 1 through $totalClasses {
+    &-t-#{$i} {
+      #{$marginType + '-top'}: #{$initialSize * $i + "rem"};
+    }
+    &-r-#{$i} {
+      #{$marginType + '-right'}: #{$initialSize * $i + "rem"};
+    }
+    &-b-#{$i} {
+      #{$marginType + '-bottom'}: #{$initialSize * $i + "rem"};
+    }
+    &-l-#{$i} {
+      #{$marginType + '-left'}: #{$initialSize * $i + "rem"};
+    }
+  }
+}

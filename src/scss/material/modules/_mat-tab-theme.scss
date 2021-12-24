@@ -1,0 +1,32 @@
+@import "variables";
+@import "mixins";
+
+@mixin custom-mat-tab-theme($theme) {
+  $primary: map-get($map: $theme, $key: primary);
+  $accent: map-get($map: $theme, $key: accent);
+  $warn: map-get($map: $theme, $key: warn);
+  $background: map-get($map: $theme, $key: background);
+  $foreground: map-get($map: $theme, $key: foreground);
+
+  // styles here
+  .mat-tab-group {
+    .mat-tab-header {
+      border: none;
+      margin-bottom: 70px;
+    }
+    .mat-tab-label {
+      border: 2px solid #fff;
+      opacity: 1;
+      padding: 0.5rem 0.5rem 0;
+      font-family: Ducks;
+      height: auto;
+      &.mat-tab-label-active {
+        background: $color-white;
+        color: $color-black;
+      }
+    }
+  }
+  .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background: transparent;
+  }
+}

@@ -1,0 +1,113 @@
+@import "variables";
+header {
+  background: black;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: calc(1200px + (#{$default-gap} * 2));
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem $default-gap;
+  position: relative;
+  &__row {
+   display: flex;
+   align-items: center;
+  }
+  &__logo {
+    max-width: 140px;
+    max-height: 40px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+  &-buttons {
+    display: flex;
+    align-items: center;
+  }
+  @media (max-width: $tablet-s) {
+    &__row {
+      flex-wrap: wrap;
+    }
+    &-buttons,
+    &.header-mobile {
+      flex-direction: column;
+      .header__logo {
+        margin-bottom: 4rem;
+      }
+    }
+    button {
+      margin: 2rem 0 0;
+    }
+  }
+}
+
+button {
+  border: 2px solid #FF4016;
+  background: #FF4016;
+  color: #000;
+  height: 29px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 0;
+  margin-left: 20px;
+}
+
+.menu {
+  display: flex;
+  div {
+    font-family: Ducks;
+    padding: 0 20px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    a {
+      text-decoration: none;
+      color: #fff;
+      &:hover {
+        color: $color-red;
+      }
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+    &:hover {
+      color: #FF4016;
+    }
+  }
+  @media (max-width: $tablet-l) {
+    font-size: 11px;
+  }
+  @media (max-width: $tablet-s) {
+    flex-direction: column;
+    font-size: 14px;
+    div {
+      margin-bottom: 1.2rem;
+    }
+  }
+}
+
+.burger__icon {
+  width: 25px;
+  height: auto;
+}
+
+.sidebar {
+  display: none;
+  &.active {
+    display: block;
+  }
+}

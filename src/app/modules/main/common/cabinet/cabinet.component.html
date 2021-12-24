@@ -1,0 +1,28 @@
+<div class="cabinet content__container white--text">
+  <div class="content__title ducks-font size48-weight400 text-align-center mt-21 mb-21">hype cabinet</div>
+  <div class="d-flex text-align-center mb-21">
+    <div class="col-4 px-15 cabinet-block">
+      <div class="ducks-font size48-weight400 red--text mb-5">{{balance}}</div>
+      <div class="size30-weight400 mb-12">total HYPE avaible</div>
+      <div class="size18-weight400 mb-7">You can do what you want with it — store, withdraw or spend. Need more?</div>
+      <app-button [text]="'buy hype'" [color]="'primary'"></app-button>
+    </div>
+    <div class="col-4 px-15 cabinet-block">
+      <div class="ducks-font size48-weight400 red--text mb-5">0</div>
+      <div class="size30-weight400 mb-12">bonus HYPE availble</div>
+      <div class="size18-weight400 mb-7">The amount of the hype you managed to get during the whole time</div>
+      <app-button [text]="'claim hype'" [color]="'primary'"></app-button>
+    </div>
+    <div class="col-4 px-15 cabinet-block">
+      <div class="ducks-font size48-weight400 red--text mb-5">0</div>
+      <div class="size30-weight400 mb-12">HYPE frozen</div>
+      <div class="size18-weight400 mb-7">The amount of HYIP frozen to fulfill the created contracts</div>
+      <app-button [text]="'spend hype'" [color]="'primary'"></app-button>
+    </div>
+  </div>
+
+  <div class="size22-weight400 ducks-font text-align-center mb-7">There is no hype contracts. visit mine hype section to git it</div>
+  <div class="flex-center mb-100">
+    <app-button [text]="'mine hype'" [color]="'primary'"></app-button>
+  </div>
+</div>

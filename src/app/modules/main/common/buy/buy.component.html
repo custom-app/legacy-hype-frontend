@@ -1,0 +1,42 @@
+<div class="content">
+    <div class="content__container">
+        <div class="text-align-center">
+            <div class="content__title mb-40">Buy hype</div>
+            <div class="content__subtitle mb-40">During Pre-sale you can buy HYPE starting from $50000</div>
+            <form class="content__form col-md-4 mb-40" #buyForm="ngForm">
+                <input class="content__input ducks-font mb-40"
+                       [(ngModel)]="promocode"
+                       name="promocode"
+                       placeholder="PROMOCODE"
+                       required
+                       />
+
+                <div class="position--relative">
+                    <input class="content__input content__input_number ducks-font mb-5"
+                           [(ngModel)]="usdt"
+                           name="usdt"
+                           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                           (ngModelChange)="saleUSDTToken(usdt)"
+                           placeholder="0"
+                           required/>
+
+                    <span class="content__input__icon ducks-font yellow--text">BUSD</span>
+                </div>
+                <div class="position--relative">
+                    <input class="content__input content__input_number ducks-font mb-5"
+                           [(ngModel)]="hype"
+                           name="hype"
+                           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                           (ngModelChange)="buyHypeToken(hype)"
+                           placeholder="0"
+                           required/>
+
+                    <span class="content__input__icon ducks-font red--text">HYPE</span>
+                </div>
+                <div>
+                    <app-button (btnClick)="buyHype()" [text]="'Buy hype'" [color]="'primary'" [disabled]="buyForm.form.invalid"></app-button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

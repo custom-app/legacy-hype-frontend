@@ -1,0 +1,9 @@
+<button
+    class="ducks-font mb-8"
+    mat-button
+    color="primary"
+    [disabled]="disabled"
+    (click)="btnClick.emit($event)"
+>
+  {{ text.toUpperCase() }}
+</button>

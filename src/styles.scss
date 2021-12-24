@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~aos/dist/aos.css";
+@import "~reset-css/sass/reset";
+
+@import "scss/variables/variables";
+@import "src/scss/fonts";
+@import "src/scss/base";
+@import "src/scss/common";
+@import "src/scss/helpers/variables";
+@import "src/scss/custom_components";
+
+
+
+@import "material/material";
+
+//@import "partials/partials";

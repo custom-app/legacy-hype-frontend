@@ -1,0 +1,20 @@
+@import "variables";
+@import "mixins";
+
+@mixin custom-snackbar-theme($theme) {
+  $primary: map-get($map: $theme, $key: primary);
+  $accent: map-get($map: $theme, $key: accent);
+  $warn: map-get($map: $theme, $key: warn);
+  $background: map-get($map: $theme, $key: background);
+  $foreground: map-get($map: $theme, $key: foreground);
+
+  // styles here
+  .mat-snack-bar-container {
+  }
+  .mat-drawer {
+    background: $color-black;
+  }
+  .mat-drawer-container {
+    background: $color-black;
+  }
+}

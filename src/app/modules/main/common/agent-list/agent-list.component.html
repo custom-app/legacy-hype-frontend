@@ -1,0 +1,21 @@
+<div class="content">
+    <div class="content__container">
+        <div class="content__title flex-center mb-40">Agents list</div>
+        <div class="tabs">
+            <mat-tab-group mat-align-tabs="center">
+                <mat-tab label="Candidates of the week">
+                    <div class="table">
+                        <app-table [data]="data" [columns]="columns"></app-table>
+                    </div>
+
+                </mat-tab>
+                <mat-tab label="current agents">
+                    <div class="table">
+                        <app-table [data]="data" [columns]="columns"></app-table>
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+
+    </div>
+</div>

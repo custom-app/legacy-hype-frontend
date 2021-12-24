@@ -1,0 +1,13 @@
+<div [classList]="'position--relative ' + class">
+  <input
+      [placeholder]="placeholder"
+      class="content__input ducks-font"
+      [formControlName]="formControlName"
+      [required]="required"
+      [readOnly]="reedOnly"
+  />
+  <span
+      *ngIf="append_text"
+      [classList]="'content__input__icon ducks-font ' + append_text_color"
+  >{{ append_text }}</span>
+</div>

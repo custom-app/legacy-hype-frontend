@@ -1,0 +1,91 @@
+@import "variables";
+
+.spacer {
+  flex: 1 0 auto;
+}
+
+.display-jc-center {
+  display: flex;
+  justify-content: center;
+}
+
+body .ducks-font, body div.ducks-font, body span.ducks-font, body h1.ducks-font, .ducks-font {
+  font-family: Ducks;
+  line-height: 1.4;
+}
+
+body .montserrat-font {
+  font-family: Montserrat, sans-serif;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.mb-md-100 {
+  @media (min-width: 768px) {
+    margin-bottom: 100px;
+  }
+}
+
+.mb-200 {
+  margin-bottom: 200px;
+}
+
+.mb-md-200 {
+  @media (min-width: 768px) {
+    margin-bottom: 200px;
+  }
+}
+
+.yellow-color {
+  color: #eabf51;
+}
+
+.purple-color {
+  color: #9B8DED;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.table {
+  margin-bottom: 10rem;
+}
+
+.position--relative {
+  position: relative;
+}
+
+.aside.svelte-rntogh {
+  z-index: 5 !important;
+}
+@media (min-width: 768px) {
+  .container-md {
+    max-width: 1200px;
+    width: 100% !important;
+  }
+}
